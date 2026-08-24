@@ -17,13 +17,16 @@ while True:
 
     elif choose == "2":
         task = input("Remove a Task : ")
-        toDoList.remove(task)
-        print("Task Removed", "\U00012713")
-
+        if task in toDoList: 
+         toDoList.remove(task)
+         print("Task Removed", "\U00012713")
+        else:
+            print("Task not Found")
     elif choose == "3":
         print("Your Task : ")
         for task in toDoList:
             print("\n", task)
+             
 
     elif choose == "4":
 
